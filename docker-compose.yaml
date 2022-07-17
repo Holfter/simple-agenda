@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+    networks:
+      - php_environment
+
+  db:
+    image: mariadb:10.7
+    container_name: mysql_container
+    restart: always
+    environment:
+      - ./.env
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - php_environment
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_container
+    restart: always
+    ports:
+      - 8000:80
+    environment:
+      - PMA_HOST=db
+      - PMA_ARBITRARY=1
+    depends_on:
+      - db
+    networks:
+      - php_environment
+
+volumes:
+  mariadb-data:
+
+networks:
+  php_environment:
+    driver: bridge
