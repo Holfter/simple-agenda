@@ -86,6 +86,7 @@
 }
 
 #back-link {
+  text-decoration: none;
   border: 1px solid #007bff;
   color: #007bff;
   border-radius: 4px;
@@ -93,7 +94,8 @@
 }
 
 #back-link:hover {
-  text-decoration: none;
+  border: 1px solid #0368d3;
+  color: #0368d3;
 }
 
 /* CREATE */
