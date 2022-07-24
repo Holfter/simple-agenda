@@ -36,19 +36,15 @@
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="<?= $BASE_URL ?>/index.php">
-                    <img src="<?= $BASE_URL ?>/img/logo.svg" alt="Agenda">
-                </a>
-                <div>
-                    <div class="navbar-nav">
-                        <a href="<?= $BASE_URL ?>/index.php" class="nav-link active" id="home-link">
-                            Agenda
-                        </a>
-                        <a href="<?= $BASE_URL ?>/create.php" class="nav-link active" id="home-link">
-                            Add Contact
-                        </a>
-                    </div>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary ps-2 pe-2">
+        <a class="navbar-brand" href="<?= $BASE_URL ?>index.php">
+            <img src="<?= $BASE_URL ?>img/logo.svg" alt="Agenda">
+        </a>
+        <div>
+            <div class="navbar-nav">
+            <a class="nav-link active" id="home-link" href="<?= $BASE_URL ?>index.php">Agenda</a>
+            <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Add contact</a>
+            </div>
+        </div>
+        </nav>
     </header>
