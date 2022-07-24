@@ -15,7 +15,9 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      - ./.env
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_USER=root
     volumes:
       - mariadb-data:/var/lib/mysql
     ports:
