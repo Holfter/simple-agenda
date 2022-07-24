@@ -5,7 +5,7 @@
     <div class="container">
         <?php include_once("templates/backbtn.html");?>
         <h1 id="main-title">Create contact</h1>
-        <form id="create-form" action="<?= $BASE_URL ?>/config/process.php" methos="POST">
+        <form id="create-form" action="<?= $BASE_URL ?>config/process.php" method="POST">
             <input type="hidden" name="type" value="create">
             <div class="form-group">
                 <label for="name">Name:</label>
